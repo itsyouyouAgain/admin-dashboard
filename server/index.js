@@ -45,6 +45,7 @@ mongoose
         /* Only add data one time*/
         // User.insertMany(dataUser);
         
-        User.insertMany(dataUser);
+        // Removed user data injection, it was repeated , it is the same code as the above line
+        // You only need to run that command once to make your inital data load to mongodb
     })
-    .catch((error) => console.log(`${error} did not connect`));
+    .catch((error) => console.log(`${error} did not connect to MongoDB =/`)); // customized the error message to be sure of source of error.

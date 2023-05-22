@@ -6,7 +6,7 @@ import { useMemo } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Dashboard from './scenes/dashboard';
 import Layout from './scenes/layout';
-import Products from "scenes/products";
+import Products from "./scenes/products";
 import Customers from "./scenes/customers";
 
 

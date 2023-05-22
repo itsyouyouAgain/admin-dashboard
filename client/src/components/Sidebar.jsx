@@ -155,7 +155,8 @@ const Sidebar = ({
                                 <ListItem key={text} disablePadding>
                                     <ListItemButton
                                         onClick={() => {
-                                            navigate(` /${lcText}`);
+                                            navigate(`${lcText}`); 
+                                            // This is the incorrect code I replaced ~~> navigate(` /${lcText}`); it has a space before the / in the path which is what was inserting the /%20/ into your URL
                                             setActive(lcText);
                                         }}
                                         sx={{

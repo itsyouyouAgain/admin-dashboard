@@ -46,7 +46,7 @@ mongoose
         
         /* Only add data one time*/
         // User.insertMany(dataUser);
-        
-        User.insertMany(dataUser);
+        // Product.insertMany(dataProduct);
+        // ProductStat.insertMany(dataProductStat);
     })
-    .catch((error) => console.log(`${error} did not connect to MongoDB =/`)); // customized the error message to be sure of source of error.
+    .catch((error) => console.log(`${error} did not connect to MongoDB =/`)); 

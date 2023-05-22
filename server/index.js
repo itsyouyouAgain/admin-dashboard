@@ -45,8 +45,8 @@ mongoose
         app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
         
         /* Only add data one time*/
-        // Product.insertMany(dataProduct);
-        // ProductStat.insertMany(dataProductStat);
-        // User.insertMany(dataUser) You only need to run that command once to make your inital data load to mongodb
+        // User.insertMany(dataUser);
+        
+        User.insertMany(dataUser);
     })
-    .catch((error) => console.log(`${error} did not connect`));
+    .catch((error) => console.log(`${error} did not connect to MongoDB =/`)); // customized the error message to be sure of source of error.

@@ -12,7 +12,9 @@ import salesRoutes from "./routes/sales.js";
 
 // data imports
 import User from "./models/User.js";
-import { dataUser } from "./data/index.js";
+import Product from "./models/Product.js";
+import ProductStat from "./models/ProductStat.js";
+import { dataUser, dataProduct, dataProductStat } from "./data/index.js";
 
 
 /* CONFIGURATION */
@@ -43,8 +45,8 @@ mongoose
         app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
         
         /* Only add data one time*/
-        // User.insertMany(dataUser);
-        
-        User.insertMany(dataUser);
+        // Product.insertMany(dataProduct);
+        // ProductStat.insertMany(dataProductStat);
+        // User.insertMany(dataUser) You only need to run that command once to make your inital data load to mongodb
     })
     .catch((error) => console.log(`${error} did not connect`));

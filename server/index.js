@@ -17,7 +17,8 @@ import Product from "./models/Product.js";
 import ProductStat from "./models/ProductStat.js";
 import Transaction from "./models/Transaction.js";
 import OverallStat from './models/OverallStat.js';
-import { dataUser, dataProduct, dataProductStat, dataTransaction, dataOverallStat } from "./data/index.js";
+import AffiliateStat from './models/AffiliateStat.js';
+import { dataUser, dataProduct, dataProductStat, dataTransaction, dataOverallStat, dataAffiliateStat, } from "./data/index.js";
 
 
 /* CONFIGURATION */
@@ -35,7 +36,7 @@ app.use(cors());
 app.use("/client", clientRoutes);
 app.use("/general", generalRoutes);
 app.use("/management", managementRoutes);
-app.use("/sale", salesRoutes);
+app.use("/sales", salesRoutes);
 
 /* MONGOOSE SETUP */
 const PORT = process.env.PORT || 9000;
@@ -53,6 +54,7 @@ mongoose
         // ProductStat.insertMany(dataProductStat);
         //OverallStat.insertMany(dataOverallStat);
         //Transaction.insertMany(dataTransaction);
+        //AffiliateStat.insertMany(dataAffiliateStat);
 
     })
     .catch((error) => console.log(`${error} did not connect to MongoDB =/`)); 
